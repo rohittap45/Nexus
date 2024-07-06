@@ -130,6 +130,7 @@ STATIC_URL= 'static/'
 STATICFILES_DIR= [os.path.join(BASE_DIR, 'static')]
 
 LOGIN_URL='/accounts/login'
+LOGOUT_URL='accounts/logout'
 
 LOGIN_REDIRECT_URL='/Nexus/'
 LOGOUT_REDIRECT_URL='/Nexus/'

@@ -20,8 +20,13 @@ Nexus
     <div class="card-body">
       <h5 class="card-title">{{nex.user.username}}</h5>
       <p class="card-text">{{nex.text}}</p>
-      <a href="{% url 'Nexus:nexus_edit' nex.id %}" class="btn btn-primary">Edit</a>
-      <a href="{% url 'Nexus:nexus_delete' nex.id %}"class="btn btn-danger">Delete</a>
+      {% if nex.user == user %}
+            <a href="{% url 'Nexus:nexus_edit' nex.id %}" class="btn btn-primary">Edit</a>
+            <a href="{% url 'Nexus:nexus_delete' nex.id %}"class="btn btn-danger">Delete</a>
+      {% endif %}
+
+     
+
     </div>
   </div>
    {% endfor %}

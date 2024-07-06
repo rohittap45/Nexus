@@ -53,6 +53,13 @@ def Nexus_delete(request,nex_id):
         return redirect('Nexus:nexus_list')
     return render(request,'Nexus/nexus_confirm_delete.html',{'nexus':nexus})
 
+# @login_required
+# def logout(request):
+#     if request.method == "POST":
+#       logout(request)
+#       redirect('Nexus:logout')
+#     return render(request,'Nexus/nexus_list.html')
+
 def register(request):
     if request.method == 'POST':
        form=UserCreationForm(request.POST)

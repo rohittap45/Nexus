@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-    <h2>Registration Form</h2>
+    <h2 class="mt-4">Registration Form</h2>
      <form  method="post">
        {% csrf_token %}
        {{form.as_p}}

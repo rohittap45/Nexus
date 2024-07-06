@@ -8,7 +8,7 @@ urlpatterns = [
     path('<int:nex_id>/edit/',views.Nexus_edit,name='nexus_edit'),
     path('<int:nex_id>/delete/',views.Nexus_delete,name='nexus_delete'),
     path('register/',views.register,name='register'),
-    # path('register/',views.register,name='register'),
+    # path('logout/',views.logout,name='logout'),
 
 
 ]
