@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Nexus
+{% endblock %}
+
+{% block content %}
+<h1 class="text-center mt-4">Welcome to Nexus</h1>
+
+<a class="btn btn-primary mb-4" href="{% url 'Nexus:nexus_create' %}" > Create Tweet</a>
+
+<div class="container row gap-3">
+   {% for nex in nexus %}
+   <div class="card" style="width: 18rem;">
+    {% if nex.photo %}
+    <img src="{{ nex.photo.url }}" class="card-img-top" alt="...">
+    {% else %}
+    <img src="path/to/placeholder/image.jpg" class="card-img-top" alt="No image available">
+     {% endif %}
+    <div class="card-body">
+      <h5 class="card-title">{{nex.user.username}}</h5>
+      <p class="card-text">{{nex.text}}</p>
+      <a href="{% url 'Nexus:nexus_edit' nex.id %}" class="btn btn-primary">Edit</a>
+      <a href="{% url 'Nexus:nexus_delete' nex.id %}"class="btn btn-danger">Delete</a>
+    </div>
+  </div>
+   {% endfor %}
+
+</div>
+
+{% endblock %}
