@@ -19,7 +19,7 @@ Nexus is a web application built using Django that replicates the core functiona
 * Django 3.x
 #### 2. Clone the repository:
 ```
-$ git clone https://github.com/your-username/nexus.git
+$ git clone https://github.com/rohittap45/nexus.git
 
 ```
 #### 3. Create a virtual environment and activate it:
